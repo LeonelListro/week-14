@@ -29,12 +29,27 @@ class InventoryPage {
 
     get imgRedshirt () {return $('#item_3_img_link > img');}
     get titleRedshirt () {return $('#item_3_title_link > div');}
-    get addRedshirt () {return $('#add-to-cart-test\.allthethings\(\)-t-shirt-\(red\)');}
-    get removeRedshirt () {return $('#remove-test\.allthethings\(\)-t-shirt-\(red\)');}
+    get addRedshirt () {return $('//*[@id="add-to-cart-test.allthethings()-t-shirt-(red)"]')}
+    get removeRedshirt () {return $('//*[@id="remove-test.allthethings()-t-shirt-(red)"]')}
+
+    get backBtn () {return $('#back-to-products');}
 
     //Methods
     open () {
         return browser.url('http://www.saucedemo.com/inventory.html')
+    }
+
+    async backToProductsClick () {
+        await this.backBtn.click();
+    }
+
+    async imgClick () {
+        await this.imgBackpack.click();
+        await this.imgBoltshirt.click();
+        await this.imgLabsonesie.click();
+        await this.imgBikelight.click();
+        await this.imgFleecejacket.click();
+        await this.imgRedshirt.click();
     }
 
     async addProducts () {
