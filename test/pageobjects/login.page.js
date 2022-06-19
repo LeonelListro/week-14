@@ -1,4 +1,5 @@
 class LoginPage {
+
     // Getters
     get inputUsername () {return $('#user-name');}
     get inputPassword () {return $('#password');}
