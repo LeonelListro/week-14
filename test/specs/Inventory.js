@@ -15,6 +15,7 @@ describe('Inventory page test', ()=> {
         it('Testing functionality of sidebar about button', async ()=> {
             await Header.burgerMenu.click();
             await expect(Header.aboutSidebar).toExist();
+            await expect(Header.aboutSidebar).toBeClickable();
             await Header.aboutSidebar.click();
             await browser.pause(1000)
             await expect(browser).toHaveUrl('https://saucelabs.com/');

@@ -7,9 +7,9 @@ class Header {
     get browserMenu () {return $('.right_component > span > select');}
     get allitemsSidebar () {return $('#inventory_sidebar_link');}
     get aboutSidebar () {return $('#about_sidebar_link');}
-    get logoutSidebar () {return $('#logout_sidebar_link');}
-    get resetSidebar () {return $('#reset_sidebar_link');}
-    get crossSidebar () {return $('#react-burger-cross-btn');}
+    get logoutSidebar () {return $('//*[@id="logout_sidebar_link"]');}
+    get resetSidebar () {return $('//*[@id="reset_sidebar_link"]');}
+    get crossSidebar () {return $('//*[@id="react-burger-cross-btn"]');}
 
     //Methods
 

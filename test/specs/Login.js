@@ -41,14 +41,14 @@ describe('Login page testing', () => {
         })
     })
 
-    describe('login with performance glitch user', ()=> {
-        it('should login with the performance flitch data', async ()=> {
-            await LoginPage.open();
-            await LoginPage.login('performance_glitch_user', 'secret_sauce');
-            await browser.setTimeout({ 'pageLoad': 10000 });
-            await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');
-        })
-    })
+    // describe('login with performance glitch user', ()=> {
+    //     it('should login with the performance flitch data', async ()=> {
+    //         await LoginPage.open();
+    //         await LoginPage.login('performance_glitch_user', 'secret_sauce');
+    //         await browser.setTimeout({ 'pageLoad': 10000 });
+    //         await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html');
+    //     })
+    // })
 
     describe('login with invalid data or empty field', ()=> {
         it('Using invalid data into the user field and password field should not login', async ()=> {
@@ -70,5 +70,3 @@ describe('Login page testing', () => {
         })
     })
 });
-
-
