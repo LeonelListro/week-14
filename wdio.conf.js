@@ -24,6 +24,7 @@ exports.config = {
         ['./test/specs/login.js',
         './test/specs/inventory.js',
         './test/specs/cart.js',
+        './test/specs/CheckoutOne.js',
         ]
     ],
     // Patterns to exclude.

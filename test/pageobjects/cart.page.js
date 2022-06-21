@@ -1,6 +1,6 @@
 class cartPage {
 
-    Getters
+    //Getters
 
     get backpackItem () {return $('#cart_contents_container > div > div.cart_list > div:nth-child(3)')}
     get boltshirtItem () {return $('#cart_contents_container > div > div.cart_list > div:nth-child(4)')}
@@ -12,7 +12,7 @@ class cartPage {
     get continueBtn () {return $('#continue-shopping')}
     get checkoutBtn () {return $('#checkout')}
 
-    Methods
+    //Methods
 
     async buttonsClick() {
         await this.removeBackpack.click();

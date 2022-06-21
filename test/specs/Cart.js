@@ -41,6 +41,7 @@ describe('Cart page testing', () => {
             await Header.cartMenu.click();
             await CartPage.checkoutBtn.click();
             await expect(browser).toHaveUrl('https://www.saucedemo.com/checkout-step-one.html')
+            await browser.pause(1000);
         });
     })
 

@@ -23,8 +23,9 @@ describe('Inventory page test', ()=> {
         it('Testing functionality of sidebar logout button', async ()=> {
             await Header.burgerMenu.click();
             await expect(Header.logoutSidebar).toExist();
-            // await Header.logoutSidebar.click();
-            // await expect(browser).toHaveUrl('https://saucedemo.com/');
+            await browser.pause(1000);
+            await Header.logoutSidebar.click();
+            await expect(browser).toHaveUrl('https://www.saucedemo.com/');
         });
         // it('Testing functionality of sidebar reset button', async ()=> {
         //     await InventoryPage.addBackpack.click();
