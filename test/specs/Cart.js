@@ -27,6 +27,10 @@ describe('Cart page testing', () => {
             await CartPage.removeBackpack.click();
             await expect (CartPage.backpackItem).not.toBeDisabled();
         })
+        it('Test the remove button', async ()=> {
+            await CartPage.removeBoltShit.click();
+            await expect (CartPage.boltshirtItem).not.toBeDisabled();
+        })
     })
 
     describe('Testing the correct functionality of the continue shopping button', ()=> {

@@ -9,6 +9,7 @@ class cartPage {
     get boltshirtPrice () {return $('//*[@id="cart_contents_container"]/div/div[1]/div[4]/div[2]/div[2]/div')}
 
     get removeBackpack () {return $('#remove-sauce-labs-backpack')}
+    get removeBoltShit () {return $('#remove-sauce-labs-bolt-t-shirt')}
     get continueBtn () {return $('#continue-shopping')}
     get checkoutBtn () {return $('#checkout')}
 

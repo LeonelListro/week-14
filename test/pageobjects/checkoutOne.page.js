@@ -31,6 +31,7 @@ class checkoutPage {
         await this. continueBtn.click();
         await this. crossErrorBtn.click();
     }
+
 }
 
 module.exports = new checkoutPage();

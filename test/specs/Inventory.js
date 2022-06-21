@@ -27,13 +27,11 @@ describe('Inventory page test', ()=> {
             await Header.logoutSidebar.click();
             await expect(browser).toHaveUrl('https://www.saucedemo.com/');
         });
-        // it('Testing functionality of sidebar reset button', async ()=> {
-        //     await InventoryPage.addBackpack.click();
-        //     await Header.burgerMenu.click();
-        //     await expect(Header.resetSidebar).toExist();
-        //     // await Header.resetSidebar.click();
-        //     // await expect(Header.cartMenu).not.toBeDisplayed();
-        // });
+        it('Testing functionality of sidebar reset button', async ()=> {
+            await Header.burgerMenu.click();
+            await expect(Header.resetSidebar).toExist();
+            await expect(Header.resetSidebar).toBeClickable();
+        });
         it('Testing sidebar cross functionality', async ()=> {
             await Header.burgerMenu.click();
             await expect(Header.crossSidebar).toExist();

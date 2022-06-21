@@ -55,8 +55,13 @@ describe('Check the first checkout page', ()=> {
 
     describe('Check the functionality of the continue button', ()=> {
         it('Test if the continue button redirect to the second checkout', async ()=> {
+            await CartPage.checkoutBtn.click();
+            await CheckoutOnePage.setName('name');
+            await CheckoutOnePage.setLastName('lastName');
+            await CheckoutOnePage.setZip('2000');
             await CheckoutOnePage.continueBtn.click();
-            await expect(browser).toHaveUrl('https://www.saucedemo.com/checkout-step-two.html')
+            await expect(browser).toHaveUrl('https://www.saucedemo.com/checkout-step-two.html');
+            await browser.pause(1000);
         });
     });
 })
